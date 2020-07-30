@@ -1,0 +1,24 @@
+syntax = "proto3";
+package ctproto;
+
+import "google/protobuf/timestamp.proto";
+
+message ctrequest {
+	string quote = 1;
+	string start = 2;
+	string end   = 3;
+	float length= 4;
+}
+
+message ct {
+	float O	= 1;
+	float C	= 2;
+	float H	= 3;
+	float L	= 4;
+	float V	= 5;
+	uint64 S= 6;
+}
+
+message ctresponse {
+	repeated ct cts = 1;
+}
